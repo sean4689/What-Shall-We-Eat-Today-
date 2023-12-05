@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>今天要吃啥</title>
+    <link rel="stylesheet" href="/static/sty.css">
 </head>
 <body>
-    <form method="post" action="/">
-        <input type="text" name="position" value="">
-        <input type="submit" name="send" value="送出">
-    </form>
-    <img src={{img}} width="150" height="150" alt="">
-    <h1>{{key}}</h1>
-    <iframe src="https://www.google.com/maps/embed?pb=九和一街12號"
+    <div class="main">
+        <h1>LOGO</h1>
+        <form method="post" action="/">
+            <input type="text" name="position" value="">
+            <input type="submit" name="send" value="送出" >
+        </form>
+        <button onclick=d()>抽取</button>
+        <section id="wrap">
+            
+        </section>
+    </div>
+    
+    <div id="fdata" d="{{fdata}}" style="display:none;"></div>
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=九和一街12號"
         width="600"
         height="450"
         style="border:0;"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+    </iframe> -->
 </body>
+<script src="/static/rand.js"></script>
 </html>

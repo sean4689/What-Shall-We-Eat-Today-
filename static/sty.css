@@ -1,0 +1,13 @@
+.main{
+    text-align: center;
+    display:block;
+    
+}
+section{
+    border: 1px solid;
+    height: 100px;
+    width:50%;
+    position: relative;
+    left: 25%;
+    display: none;
+}
