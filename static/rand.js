@@ -1,33 +1,27 @@
 function d(){
-    let fdata = document.getElementById("fdata").getAttribute('d');
+    var fdata = document.getElementById("fdata").getAttribute('d');
     var cleanedString = fdata.replace(/[\[\]']+/g, '');
-    alert(cleanedString);
-    fdata=fdata.split(",")
+    var fdata=cleanedString.split(",")
     alert(fdata);
-    let data = document.getElementById("wrap");
-    data.style.display="block";
-    if (data ===null){
-        for(b=0;b<fdata.length;b++){
-
-            var c=document.createElement("span");
-        
-            c.textContent=fdata[b];
-        
-            data.appendChild(c);
-            }
+    var sec = document.getElementsByClassName("w1")[0];
+    alert(sec)
+    // if (sec) {
+    //     // 將元素的 display 屬性設置為 "block"
+    //     sec.style.display = "block";
+    // }
+    if (sec ===null){
+       alert("請輸入位址");
     }
     else{
-        while (data.firstChild) {
-            data.removeChild(data.firstChild);
             for(b=0;b<fdata.length;b++){
 
                 var c=document.createElement("span");
             
                 c.textContent=fdata[b];
             
-                data.appendChild(c);
+                sec.appendChild(c);
                 }
         }
-        }
-    }
+}
+
    

@@ -3,11 +3,20 @@
     display:block;
     
 }
-section{
+.w{
+    font-size: 80px;
+    text-align: center;
     border: 1px solid;
-    height: 100px;
+    height: auto;
     width:50%;
     position: relative;
     left: 25%;
-    display: none;
+    overflow: hidden;
+}
+.w span{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+.w1{
+    width: 100px;
 }
