@@ -23,7 +23,8 @@ def finddata(page,pos):
             nextpage=driver.find_element(By.CLASS_NAME,"fl")
             nextpage.click()    
         except:
-            print("沒有第二頁")    
+            print("沒有第二頁")
+        time.sleep(2)        
     driver.close()
     # conbine=dict(zip(name,image))
     # return conbine

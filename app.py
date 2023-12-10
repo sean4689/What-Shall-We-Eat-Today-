@@ -5,7 +5,7 @@ app = Flask(__name__)
 def go():
     if request.method=="POST":
         a=request.form['position']
-        fdata=fd.finddata(2,str(a))
+        fdata=fd.finddata(3,str(a))
         print(fdata)
         return render_template('index.html',fdata=fdata)
     return render_template('index.html')
