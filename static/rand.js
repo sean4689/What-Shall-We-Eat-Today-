@@ -7,13 +7,23 @@ function d(){
     var cleanedString = fdata.replace(/[\[\]']+/g, '');
     var fdata=cleanedString.split(",")
     var sec = document.getElementById("fname");
-    for(i=0;i<100;i++){
-        setTimeout(function(){
-                var a=randomNumber(0,fdata.length);
-                sec.innerText=fdata[a];
-                },100*i)
+    var completedIterations = 0;
+    if(fdata[1]===undefined){
+        alert("請輸入現在位置");
     }
-    
+    else{
+        for(i=0;i<50;i++){
+            setTimeout(function(){
+                    var a=randomNumber(0,fdata.length);
+                    sec.innerText=fdata[a];
+                    completedIterations++;
+                    if (completedIterations === 50) {
+                        var fhref = document.getElementById("fhref");
+                        fhref.href="https://www.google.com/search?q="+sec.innerText;
+                    }
+                    },100*i);
+        }
+    }
 }
    
     

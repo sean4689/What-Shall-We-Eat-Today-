@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>今天要吃啥</title>
-    <link rel="stylesheet" href="/static/sty.css">
+    <link rel="stylesheet" href="../static/sty.css">
 </head>
 <body>
     <div class="main">
         <h1>LOGO</h1>
         <form method="post" action="/">
-            <input type="text" name="position" value="">
+            <input type="text" name="position" value="" placeholder="請輸入現在位置">
             <input type="submit" name="send" value="送出" >
         </form>
+        <p class="now">{{ok}}</p>
         <button onclick=d()>抽取</button>
         <section class="w1">
-            <h1 id="fname"></h1>
+            <a href="" id="fhref" target="_blank" ><h1 id="fname" style="margin-top: 10px;"></h1></a>
         </section>
     </div>
     
-    <div id="fdata" d="{{fdata}}" style="display:none;"></div>
+    <div id="fdata" d="{{fdata}}" ></div>
     <!-- <iframe src="https://www.google.com/maps/embed?pb=九和一街12號"
         width="600"
         height="450"
@@ -28,7 +29,7 @@
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
     </iframe> -->
-    <script src="/static/rand.js"></script>
+    <script src="../static/rand.js"></script>
 </body>
 
 </html>
